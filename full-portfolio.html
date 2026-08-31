@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shika Akpaloo - Full Portfolio</title>
+  <meta name="description" content="Full portfolio for Shika Akpaloo, technical analyst in extractive-sector governance, environmental and social risk, and gender equality and social inclusion.">
+  <style>
+    :root {
+      --bg: #fbf7ef;
+      --text: #1e1b18;
+      --muted: #62594e;
+      --rule: #d8cdbd;
+      --accent: #8b3f20;
+      --accent-dark: #642d17;
+      --surface: #fffdf8;
+      --focus: #0c6b64;
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Avenir, "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.68;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 750;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .page {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 28px 20px 36px;
+    }
+
+    header {
+      padding: clamp(30px, 7vw, 72px) 0 clamp(30px, 5vw, 52px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    main {
+      padding: clamp(28px, 5vw, 54px) 0 20px;
+    }
+
+    footer {
+      padding: 26px 0 8px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 4.8rem);
+    }
+
+    h2 {
+      padding-top: clamp(30px, 5vw, 50px);
+      margin-top: clamp(30px, 5vw, 50px);
+      border-top: 1px solid var(--rule);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+    }
+
+    h2:first-child {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: 0;
+    }
+
+    h3 {
+      max-width: 760px;
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
+    }
+
+    p {
+      max-width: 74ch;
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+
+    ul {
+      max-width: 74ch;
+      margin: 14px 0 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.35rem;
+    }
+
+    .eyebrow,
+    .meta {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .lede {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.18rem);
+    }
+
+    .contact {
+      margin-top: 22px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 26px;
+      padding: 8px 14px;
+      border: 1px solid currentColor;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 28px;
+      margin-top: 22px;
+    }
+
+    .fact {
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .fact dt {
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .fact dd {
+      margin: 6px 0 0;
+      color: var(--text);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 820px;
+      margin-top: 18px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills li {
+      margin: 0;
+      padding: 7px 10px;
+      border: 1px solid var(--rule);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+
+    .timeline {
+      margin-top: 20px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: minmax(112px, 150px) minmax(0, 1fr);
+      gap: 18px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .year {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .experience-list {
+      margin-top: 18px;
+    }
+
+    article {
+      padding: 28px 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    article:first-child {
+      border-top-color: transparent;
+    }
+
+    .article-body {
+      margin-top: 12px;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      .summary,
+      .role {
+        grid-template-columns: 1fr;
+      }
+
+      .role {
+        gap: 3px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">Full portfolio</p>
+      <h1>Shika Akpaloo</h1>
+      <p class="lede">Technical analyst in extractive-sector governance, environmental and social risk, and gender equality and social inclusion.</p>
+      <p class="contact">shikaangelique@gmail.com · shika@cedaghana.com · +233 552294596</p>
+      <a class="back" href="index.html">Back to selected work</a>
+    </header>
+
+    <main>
+      <section aria-labelledby="profile">
+        <h2 id="profile">Profile</h2>
+        <dl class="summary">
+          <div class="fact">
+            <dt>Name</dt>
+            <dd>Shika Akpaloo</dd>
+          </div>
+          <div class="fact">
+            <dt>Nationality</dt>
+            <dd>Ghanaian</dd>
+          </div>
+          <div class="fact">
+            <dt>Country Experience</dt>
+            <dd>Ghana, Netherlands</dd>
+          </div>
+          <div class="fact">
+            <dt>Qualifications</dt>
+            <dd>MSc. Chemical Engineering – University of Groningen, Netherlands<br>BSc. Chemical Engineering – KNUST, Ghana</dd>
+          </div>
+          <div class="fact">
+            <dt>Languages</dt>
+            <dd>English – Native speaker<br>Fante &amp; Twi – Competent<br>French – Basic<br>Ewe – Basic</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="skills">
+        <h2 id="skills">Technical Skills</h2>
+        <ul class="skills">
+          <li>Advanced Research &amp; Analytical Skills</li>
+          <li>Extractive Sector Governance &amp; Policy Development &amp; Analysis</li>
+          <li>Gender Equality &amp; Social Inclusion (GESI)</li>
+          <li>Strategic Planning &amp; Implementation</li>
+          <li>Stakeholder Engagement &amp; Collaboration</li>
+          <li>Advanced Data Analytics &amp; Visualization</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="summary">
+        <h2 id="summary">Summary of Experience</h2>
+        <p>As a chemical engineer and research specialist with three years of expertise in the Ghana oil and gas industry's technical and policy domains, Shika has worked on research and analysis projects for various donor-funded initiatives in Ghana, and her abilities include governance and policy analysis, research and analysis, computer programming, data analysis and visualization, and process and product engineering.</p>
+        <p>Shika has contributed to projects and supplied deliverables over the years by conducting timely and critical research to guide strategy development and institutional decision making, which has aided policy review initiatives, outreach programs, and program implementation schemes. In Ghana’s technical extractive sector, Shika at the Ghana National Petroleum Corporation, organized and led a team of geochemical researchers to conduct a nation-wide sub-surface gas collection and study of the Voltaian Basin to determine the commercial feasibility of the onshore petroleum reserve.</p>
+        <p>Shika has offered the necessary analytical services on projects and research initiatives that have considerably improved Ghana's oil and gas sector. She was a member of the technical team that collaborated with the Ministry of Energy to develop Environmental Health Security and Safety guidelines to provide all relevant information on functional safety in order to maintain the reliability and safe performance of all institutions working in Ghana's energy sector. She also played an important role in an organized Gender Review with the Ministry of Energy on the Local Content and Local Participation (L.I. 2204) law to assess the impact of proposed regulations and how they could be better designed to achieve outcomes that meet the needs of men and women equally.</p>
+        <p>She produced project initiation documentation, such as project charter and strategy documents, a RACI matrix, and a communication plan, to kickstart the Women in Energy platform, an organization of individuals and businesses working to advance women's leadership and participation in Ghana's energy sector. She also created a variety of communication materials to present the platform to the appropriate parties.</p>
+      </section>
+
+      <section aria-labelledby="employment">
+        <h2 id="employment">Employment History</h2>
+        <div class="timeline">
+          <div class="role">
+            <div class="year">2025-present</div>
+            <div>GESI Lead, Technical Analyst (Mining Formalisation and Governance), TAG International, UK-Ghana Gold Programme</div>
+          </div>
+          <div class="role">
+            <div class="year">2021-present</div>
+            <div>Technical and GESI Lead, Senior Project Ofiicer, Centre for Extractives and Development, Africa (CEDA)</div>
+          </div>
+          <div class="role">
+            <div class="year">2021-present</div>
+            <div>Research Consultant and Data Scientist</div>
+          </div>
+          <div class="role">
+            <div class="year">2021</div>
+            <div>Teaching and Research Assistant, University of Groningen, Netherlands</div>
+          </div>
+          <div class="role">
+            <div class="year">2020</div>
+            <div>Engineering Intern, Plixxent B.V., Netherlands</div>
+          </div>
+          <div class="role">
+            <div class="year">2019</div>
+            <div>Technical Analyst, Ghana Oil and Gas for Inclusive Growth Program, DFID, Ghana</div>
+          </div>
+          <div class="role">
+            <div class="year">2017-2018</div>
+            <div>Graduate Engineer, Ghana National Petroleum Commission, Ghana</div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience">
+        <h2 id="experience">Selected Experience</h2>
+        <div class="experience-list">
+          <article>
+            <h3>Gender-Responsive Financial Inclusion Policy Development</h3>
+            <p class="meta">Role: GESI Lead · Year: 2025–2026 · Client: TAG International (UK-Ghana Gold Programme, UK Home Office-funded)</p>
+            <p class="article-body">The work supported the regulator to develop instruments extending formal financial access to women in artisanal and small-scale gold mining. As GESI Lead, I authored the terms of reference for a multi-stakeholder financial inclusion working group and developed women-focused pre-financing options built on mobile money, group-based lending, and production-aligned repayment. I advanced a commercial bank engagement strand on the position that regulatory compliance data functions as credit infrastructure for assessing operators. The approach positioned financial inclusion as a route to reducing women's dependency on informal, criminally linked sponsors.</p>
+          </article>
+
+          <article>
+            <h3>GESI Integration in Law Enforcement Training</h3>
+            <p class="meta">Role: GESI Lead · Year: 2026 · Client: TAG International (UK-Ghana Gold Programme, UK Home Office-funded)</p>
+            <p class="article-body">The assignment embedded gender and social inclusion content into a Training of Trainers programme for officers working on gold smuggling and illicit financial flows. As GESI Lead, I designed the content as investigative practice rather than as a standalone equity module, directing participants to the enforcement blind spots that organised crime groups exploit. The material prompted officers to identify women in aggregation, processing, and trading roles whom enforcement systematically under-assesses as risk-bearing. Delivery took place at the Detective Training Academy, Tesano.</p>
+          </article>
+
+          <article>
+            <h3>Responsible Sourcing Policy Development (Gold Sector)</h3>
+            <p class="meta">Role: Technical Analyst and Author · Year: 2026 · Client: TAG International (UK-Ghana Gold Programme, UK Home Office-funded)</p>
+            <p class="article-body">The assignment produced a responsible sourcing policy for the national gold sector regulatory authority, benchmarked against international due diligence standards. As technical analyst and author, I conducted key informant interviews across the regulator's operational units and with an accredited refiner, assembled the supporting evidence base, and drafted the policy and its operational annexes. The policy aligned national practice with the OECD Due Diligence Guidance, LBMA Responsible Gold Guidance, the CRAFT Code, and FATF standards. I embedded gender-responsive due diligence, including calibration for women operators, within the design.</p>
+          </article>
+
+          <article>
+            <h3>AML/CFT Institutional Capacity Assessment</h3>
+            <p class="meta">Role: Technical Analyst and Author · Year: 2026 · Client: TAG International (UK-Ghana Gold Programme, UK Home Office-funded)</p>
+            <p class="article-body">The assignment assessed anti-money laundering and counter-financing of terrorism capacity across the regulator's priority operational departments and produced an integration plan to embed AML/CFT processes into daily practice. As technical analyst and author, I reviewed regional evaluation findings and the regulator's existing policy suite, mapped process maturity against those findings, and drafted the assessment report and integration plan. The work drew on FATF recommendations, GIABA typologies, and Bank of Ghana frameworks. It set out how controls could be strengthened within the regulator's existing guidelines rather than through a separate policy.</p>
+          </article>
+
+          <article>
+            <h3>Engaging Communities in a Just Transition</h3>
+            <p class="meta">Consultant · 2024-2025 · Ghana EITI (GHEITI) / EITI International Secretariat</p>
+            <p class="article-body">Served as Technical and GESI Lead consultant under the Ford Foundation-funded "Engaging Communities in a Just Transition" project, implemented in the Ellembelle District of Ghana's Western Region. Designed and delivered a subnational dissemination and engagement strategy to improve community access to extractive sector data and strengthen participation in energy transition decision-making. Led capacity building activities for the Ellembelle Multi-Stakeholder Group (MSG), local media, and civil society, and coordinated the inauguration of the Ellembelle Energy Transition Sub-Committee (EETC) as a dedicated institutional mechanism for community-led advocacy. Developed communication materials including factsheets, infographics, and audio-visual content, and oversaw multi-channel dissemination through radio, digital platforms, townhall events, and community information centres. Contributed project insights to global EITI peer learning exchanges on subnational implementation models.</p>
+          </article>
+
+          <article>
+            <h3>The Ghanaian Mining Sector's Roadmap to Net-Zero: Challenges, Innovations, and Collaboration</h3>
+            <p class="meta">Panel Moderator · 2025 · WACEE 2025 / Competence Center Mining and Mineral Resources West Africa, Bluestone Alliance, Women in Mining Ghana</p>
+            <p class="article-body">Moderated a 2.5-hour expert panel at the West African Clean Energy and Environment Trade Fair (WACEE 2025), convening four sector specialists across regulatory oversight, corporate sustainability, environmental science, and ESG communications to discuss Ghana's mining decarbonization roadmap. Responsibilities included full pre-event preparation: consolidating panelist profiles, designing tailored question sequences for each speaker, and developing a structured moderator's guide with timing protocols and thematic transitions. Applied the NAME-FRAME-AIM facilitation technique to sustain conversational flow across four thematic segments, linking panelist contributions to broader policy, operational, and investment dimensions. Integrated a paired icebreaker format that directed complementary rather than identical prompts to panelists, enabling a cohesive opening exchange without repetition.</p>
+          </article>
+
+          <article>
+            <h3>Improving Public Analysis of the Minerals Income Investment Fund (MIIF)</h3>
+            <p class="meta">Lead Researcher and Author · 2025-2026 · Natural Resource Governance Institute (NRGI)</p>
+            <p class="article-body">Commissioned by NRGI and produced through the Centre for Extractives and Development Africa (CEDA), this study examined the legal and economic governance architecture of Ghana's Minerals Income Investment Fund, covering its statutory framework, institutional design, investment strategy, and accountability mechanisms. The research benchmarked MIIF against the Santiago Principles and three international sovereign wealth fund comparators (Norway's GPFG, Chile's ESSF/PRF, and Botswana's Pula Fund), and drew on Ghana's Petroleum Revenue Management Act as a domestic institutional reference. Findings identified structural gaps in disclosure, fiscal rule design, and operational independence, with particular attention to the governance implications of the 2025 legislative amendments that reduced MIIF's statutory share of mineral royalties from 80% to 2%. The study produced evidence-based recommendations across governance, transparency, and mineral revenue management framework design, intended to support civil society and parliamentary advocacy for MIIF reform.</p>
+          </article>
+
+          <article>
+            <h3>Analysis of Ghana's Bauxite Agreement with Ashanti Bauxite</h3>
+            <p class="meta">2025 · Natural Resource Governance Institute (NRGI) / Centre for Extractives and Development Africa (CEDA)</p>
+            <p class="article-body">Conducted a comprehensive review of the bauxite lease agreement between the Government of Ghana and Ashanti Bauxite, examining its legal, fiscal, environmental, and social dimensions. The analysis benchmarked Ghana's fiscal regime against comparable bauxite-producing jurisdictions, including Guinea and Australia, assessing royalty rates, corporate tax structures, and revenue-sharing mechanisms. Designed the Gender Equality and Social Inclusion (GESI) assessment toolkit and supported the development of the study report covering local content compliance, community benefit provisions, and downstream beneficiation arrangements. Contributed to stakeholder engagement with institutions including the Minerals Commission, GIADEC, and the Ghana Chamber of Mines, and participated in the validation workshop to finalize findings and recommendations.</p>
+          </article>
+
+          <article>
+            <h3>Analytical Assessment of Ghana's Sliding-Scale Royalty Regime</h3>
+            <p class="meta">2026 · Natural Resource Governance Institute (NRGI)</p>
+            <p class="article-body">Produced a policy report assessing the fiscal impact, mine-level viability, and competitiveness implications of Ghana's sliding-scale royalty regime across 13 large-scale gold mining operations over a 2024-2028 horizon. The project involved constructing a deterministic fiscal model incorporating corporate income tax, the Growth and Sustainability Levy, and royalty rate mechanics, and calibrating it against S&amp;P Global production cost indicators and Bank of Ghana price data. Analysis drew on GHEITI reporting, Chamber of Mines statistics, and international comparator regimes to situate Ghana's fiscal terms within the broader resource governance literature. The role covered model design, data sourcing and reconciliation, and authorship of the full report across chapters on fiscal instrument structure, mine-level sensitivity analysis, and policy implications.</p>
+          </article>
+
+          <article>
+            <h3>Exploring Ghana's Transition Pathways to Electric 2/3-Wheelers</h3>
+            <p class="meta">Data and GESI Expert · 2024–2026 · Climate Compatible Growth (CCG), funded by UK FCDO</p>
+            <p class="article-body">Led the data and gender equality and social inclusion (GESI) workstreams of a 22-month research and advocacy project examining Ghana's policy, economic, and manufacturing pathways for electric two- and three-wheelers. Designed and analysed three national survey instruments administered through KoboToolbox across eight to nine districts, covering 260 riders, distributors, and district assemblies, and translated the findings into working papers and policy briefings. Mainstreamed GESI across nine project deliverables and coordinated the Gender Advisory Committee's review of outputs. Authored and edited technical deliverables spanning the comprehensive review and gap analysis, cost and economic viability, local manufacturing assessment, and the national advocacy framework. Managed communications outputs, stakeholder engagement, and contract and timesheet reporting to the funder.</p>
+          </article>
+
+          <article>
+            <h3>Subnational Community Engagement and Strategy Development</h3>
+            <p class="meta">2026 · EITI International Secretariat (through GHEITI)</p>
+            <p class="article-body">Engaged by the EITI International Secretariat to support Ghana EITI in strengthening community-level data use and dialogue in the context of the energy transition. The assignment covered two components: designing and co-facilitating a subnational peer exchange workshop across four mining and energy communities (Ellembelle, Prestea-Huni Valley, Obuasi Municipal, and Ewoyaa), and leading the development of a subnational community engagement strategy for GHEITI. The peer exchange brought together community representatives, local governments, civil society, and companies to apply the EITI Community Engagement Toolkit and generate dialogue on local extractive sector impacts. The strategy development process drew on field consultations, a national partners roundtable, and a dedicated MSG workshop, with the resulting strategy designed to embed subnational engagement in GHEITI's work planning beyond the Ford Foundation grant period.</p>
+          </article>
+
+          <article>
+            <h3>Outcome Survey and Evaluation, AngloGold Ashanti Ghana Socio-Economic Development Plan (SEDP), Obuasi Mine</h3>
+            <p class="meta">2026 · AngloGold Ashanti Ghana (via CEDA)</p>
+            <p class="article-body">Led the outcome survey and evaluation of AGAG's 10-year SEDP across five host districts (Obuasi Municipal, Obuasi East, Adansi North, Amansie Central, Akrofuom), assessing delivery across Education, Health, WASH, Agriculture, Infrastructure, and Skills and Entrepreneurship. As GESI and Data Lead, I designed and ran the KoboToolbox data collection instruments across six sector sheets and built the extraction pipeline that processed field data for analysis. I structured the evaluation against the OECD-DAC criteria and assessed project delivery, community coverage, geographic equity across districts, and GESI mainstreaming. I conducted and synthesised beneficiary interviews and key informant interviews, cross-checking implementation reports against field evidence to surface discrepancies between recorded and operational project status. I produced the aggregated outcome reports used directly by AGAG and CEDA stakeholders.</p>
+          </article>
+
+          <article>
+            <h3>Analytical Review and Youth and Stakeholder Engagement on Ghana's Energy Transition Plan</h3>
+            <p class="meta">Ghana · 2024 · Strategic Youth Network for Development (SYND-GHANA)</p>
+            <p class="article-body">As part of the analytical review team, Shika played a key role in evaluating Ghana's energy transition plans to ensure alignment with national development objectives and socio-economic impacts. She was instrumental in conducting desktop research, stakeholder consultations, and quantitative analysis to assess the adequacy and feasibility of the National Energy Transition Framework. In the review of the Energy Transition Plan, Shika conducted an in-depth analysis to evaluate the inclusivity of the plan concerning vulnerable groups, scrutinizing the measures taken to mitigate unintended adverse effects on these communities. Furthermore, she examined the extent and effectiveness of the engagement strategies employed to ensure that frontline communities are adequately informed and involved in the transition process. The project culminated in recommendations to enhance institutional readiness and capacity. Additionally, she facilitated capacity-building sessions for Ghanaian youth, aimed at increasing awareness and understanding of the country's energy transition framework and targets.</p>
+          </article>
+
+          <article>
+            <h3>Impact Assessment of ABFA Utilization by Development Authorities</h3>
+            <p class="meta">Ghana · 2024 · Africa Centre for Energy Policy (ACEP)</p>
+            <p class="article-body">In the broader context of the Impact Assessment of ABFA Utilization by Development Authorities, the integration of Gender Equality and Social Inclusion (GESI) considerations plays a pivotal role. With expertise in this domain, Shika provided invaluable insights into the differential impacts of development projects on marginalized groups and vulnerable demographics within the catchment areas of the Development Authorities. These contributions significantly influenced the assessment process by shedding light on gender dynamics, socio-economic disparities, and access barriers that often exacerbate inequalities within communities. Advocating for the integration of GESI perspectives into the project's analytical framework, she emphasized the imperative of addressing systemic inequalities and empowering marginalized groups in decision-making processes. Her nuanced analysis enriched the assessment process, ensuring that findings and recommendations resonate with the diverse needs and aspirations of all community members.</p>
+          </article>
+
+          <article>
+            <h3>Sustainable Management of Mineral Resources in Ghana and Alignment with the African Mining Vision (AMV)</h3>
+            <p class="meta">Ghana · 2024 · African Minerals Development Centre (AMDC) and AfCFTA Secretariat</p>
+            <p class="article-body">As a research assistant, Shika contributed to the comprehensive assessment of Ghana's mineral resource management and its alignment with the African Mining Vision. She supported the team by gathering and analyzing data, reviewing policy documents, and preparing the report. Her efforts were instrumental in evaluating Ghana’s progress across the six African Minerals Governance Framework pillars, which highlighted the country's advanced stage of AMV implementation. Shika also assisted in organizing and facilitating an advocacy workshop in Accra to launch the report, where key findings and recommendations were presented to stakeholders. These recommendations included introducing competitive bidding for mining acreages, investing in geological data acquisition, and developing a new green minerals development plan. The workshop underscored the need for addressing gender disparities in mining and promoting sustainable practices within the sector.</p>
+          </article>
+
+          <article>
+            <h3>ASM Stakeholder Mapping and Preparation of 2020 Ghana EITI Technical Report on the ASM Sector</h3>
+            <p class="meta">Ghana · 2023 · Ghana Extractive Industries Transparency Initiative (GHEITI)</p>
+            <p class="article-body">As a part of the technical Working Group Member responsible for conducting stakeholder mapping and preparing the 2020 EITI Technical Report on the ASM sector in Ghana, Shika collaborated with a team of experts and stakeholders to identify and engage key actors involved in the artisanal and small-scale mining sector. Conducted comprehensive research and data collection to gather relevant information on ASM operations, stakeholders, and their contributions to the national economy.</p>
+          </article>
+
+          <article>
+            <h3>Enhancing Women's Participation in Extractive Sector Governance for Women in Mining (WIM) Ghana</h3>
+            <p class="meta">Ghana · 2023 · WIM Ghana</p>
+            <p class="article-body">As a gender expert in the Technical Working Team, Shika actively contributes to the project's goal of promoting gender equality and women's empowerment in the mining sector by conducting in-depth gender analysis of the extractive industry, identifying barriers to women's participation, and recommending strategies for improvement. She collaborates with other team members in devising policies and practices to enhance women's engagement and representation in extractive sector governance. Her expertise supported the development of a comprehensive action plan to bridge gender gaps and ensure a more equitable and inclusive mining industry in Ghana.</p>
+          </article>
+
+          <article>
+            <h3>Final Evaluation of the Project “Local Economic Empowerment for Women, Youth and Vulnerable Groups Through CSOs And LAs Concerted Action (LEEWYV) Project</h3>
+            <p class="meta">Ghana · 2023 · Volontariato Internazionale per lo Svilupp (VIS)</p>
+            <p class="article-body">As an evaluator for the LEEWYV Project, Shika assumed a pivotal role in conducting the final evaluation of the multi-year initiative aimed to empower women, youth, and vulnerable groups in Ghana's Bono and Bono East regions through collaborative efforts with Civil Society Organizations (CSOs) and Local Authorities (LAs). The responsibilities of the role encompassed comprehensively assessing the project's outcomes, impacts, and effectiveness in promoting sustainable economic development and preventing irregular migration. Throughout the evaluation process, Shika meticulously analyzed project documentation, conducted interviews with stakeholders, beneficiaries, and implementing partners, and evaluated the extent to which project objectives were met. Evaluation findings provided valuable insights into the project's strengths, weaknesses, and lessons learned, contributing to informed decision-making and potential future program improvements.</p>
+          </article>
+
+          <article>
+            <h3>Development of a Communication Strategy and Public Outreach Plan for the Public Interest and Accountability Committee (PIAC)</h3>
+            <p class="meta">Ghana · 2023 · GIZ Ghana</p>
+            <p class="article-body">As a technical consultant Shika contributed to the development a comprehensive communication strategy and public outreach plan for PIAC. Involved in designing and conducting the perception survey, analyzing the findings, and providing insights to inform the strategy. Collaborated with other team members to propose initiatives targeting various educational backgrounds and stakeholders to enhance public awareness and engagement with PIAC's activities. Also contributed to formulating action plans, monitoring and evaluation frameworks, and recommendations for improving communication efforts and transparency in the management of petroleum resources in Ghana.</p>
+          </article>
+
+          <article>
+            <h3>Ecological Footprint Assessment and Preparation of Environmental Management Plan for the GROWING Project Team</h3>
+            <p class="meta">Ghana · 2022 · International Potato Center (CIP) through its host institution in Ghana, International Water Management Institute (IWMI)</p>
+            <p class="article-body">As an environment and sustainable production analyst, Shika carried out research and one-on-one engagements with local district stakeholders to establish a baseline conditions for the farming and production systems in six (6) districts in the Northern part of the country and developed an Environmental Management Plan with proposals on adequate Women-focused Climate Smart Agriculture innovations for the GROWING project being implemented in Ghana to improve nutritional and financial security of women, youth, and young children in 6 selected districts.</p>
+          </article>
+
+          <article>
+            <h3>Scoping Study of utilization of the Ghana National Health Insurance Scheme for Kayayei’s among Kayayei in Accra</h3>
+            <p class="meta">Ghana · 2022 · WIEGO Ghana</p>
+            <p class="article-body">The was conducted through a combination of secondary literature review, semi-structured interviews with development partners, and survey interviews with Kayayei to provide an assessment of key issues pertaining to Kayayei’s access to the National Health Insurance Scheme (NHIS) in Ghana, emerging government priorities, and opportunities for WIEGO in charting a course for the post-COVID support for Kayayei’s enrolment on the NHIS and their access to quality health care in Ghana.</p>
+          </article>
+
+          <article>
+            <h3>Women in Energy Inception</h3>
+            <p class="meta">Ghana · 2019 · Ghana Oil and Gas for Inclusive Growth (DFID Project)</p>
+            <p class="article-body">As a Technical Analyst for the Women in Energy platform, I contributed to the development of the platform's inception and implementation strategy documents, conducted methodological stakeholder analysis to identify members for the Core Group, and published introduction communicatory documents that were distributed to the public.</p>
+          </article>
+
+          <article>
+            <h3>Research for a Health, Safety, Security, and Environment (HSSE) Manual</h3>
+            <p class="meta">Ghana · 2019 · Ghana Oil and Gas for Inclusive Growth (DFID Project)</p>
+            <p class="article-body">As a member of a working group tasked with developing a Health, Safety, Security, and Environment (HSSE) manual for companies in Ghana's energy sector in collaboration with the Ministry of Energy, I conducted research for the group in order to provide learnings from similar publications in other countries and contextual analysis in order to adopt adequate Ghana-based guidelines to be outlined in the document.</p>
+          </article>
+
+          <article>
+            <h3>Gender Review of L. I. 2204</h3>
+            <p class="meta">Ghana · 2019</p>
+            <p class="article-body">A Gender review was commissioned by the Ministry of Energy to carry out a gender-based legal analysis and a gender-impact analysis of the Local Content and Local Participation (L.I. 2204) and identify optimal areas to boost women’s involvement in the management of oil and gas resources.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Shika Akpaloo · Accra, Ghana</p>
+      <p>shikaangelique@gmail.com · shika@cedaghana.com · +233 552294596</p>
+    </footer>
+  </div>
+</body>
+</html>

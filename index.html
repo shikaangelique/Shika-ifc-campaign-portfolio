@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shika Akpaloo - Selected Work</title>
+  <meta name="description" content="This portfolio is curated specifically for the Campaign on IFC Sustainability Framework.">
+  <style>
+    :root {
+      --bg: #fbf7ef;
+      --text: #1e1b18;
+      --muted: #62594e;
+      --rule: #d8cdbd;
+      --accent: #8b3f20;
+      --accent-dark: #642d17;
+      --surface: #fffdf8;
+      --focus: #0c6b64;
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Avenir, "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .page {
+      width: min(100%, 880px);
+      margin: 0 auto;
+      padding: 32px 20px 28px;
+    }
+
+    header {
+      padding: clamp(36px, 8vw, 84px) 0 clamp(34px, 6vw, 64px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    main {
+      padding: clamp(34px, 6vw, 62px) 0;
+    }
+
+    footer {
+      padding: 30px 0 16px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(2.6rem, 8vw, 5rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+
+    h3 {
+      max-width: 760px;
+      font-size: clamp(1.55rem, 3.5vw, 2.3rem);
+    }
+
+    p {
+      max-width: 72ch;
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 1.05rem;
+    }
+
+    .strapline {
+      max-width: 760px;
+      margin-top: 18px;
+      color: var(--accent);
+      font-size: clamp(1rem, 2.4vw, 1.15rem);
+      line-height: 1.45;
+      font-weight: 650;
+    }
+
+    .lede {
+      margin-top: 34px;
+    }
+
+    .contact-line {
+      margin-top: 24px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .portfolio-link {
+      margin-top: 18px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .section-intro {
+      margin-bottom: 6px;
+    }
+
+    .section-intro p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .work-list {
+      margin-top: 18px;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: minmax(46px, 72px) minmax(0, 1fr);
+      gap: clamp(16px, 4vw, 34px);
+      padding: clamp(34px, 6vw, 58px) 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    article:first-child {
+      border-top-color: transparent;
+    }
+
+    .marker {
+      padding-top: 0.28rem;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 1.12rem;
+      line-height: 1;
+    }
+
+    .meta {
+      max-width: 74ch;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.55;
+    }
+
+    .body {
+      margin-top: 20px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 24px;
+      padding: 9px 15px;
+      border: 1px solid currentColor;
+      border-radius: 3px;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      background: var(--surface);
+      color: var(--accent-dark);
+    }
+
+    .text-link {
+      font-weight: 750;
+    }
+
+    .footer-name {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .redistribution {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      article {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .marker {
+        padding-top: 0;
+      }
+
+      .meta {
+        font-size: 0.74rem;
+        letter-spacing: 0.06em;
+      }
+
+      .cta {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Shika Akpaloo</h1>
+      <p class="strapline">Extractive-sector governance · Environmental and social risk · Gender equality and social inclusion</p>
+      <div class="lede">
+        <p>This portfolio is curated specifically for the Campaign on IFC Sustainability Framework.</p>
+        <p>As a technical analyst in extractive-sector governance and environmental and social risk, and Technical and GESI Lead at the Centre for Extractives and Development Africa, my work is benchmarking institutions and projects against written standards, the same exercise the IFC Performance Standards invite.</p>
+        <p>I also verify paper against ground evidence and translate dense technical findings into forms regulators, host communities and young people can each interrogate on their own terms, as depicted in the key work products presented here.</p>
+      </div>
+      <p class="contact-line">shikaangelique@gmail.com · shika@cedaghana.com · +233 552294596</p>
+      <p class="portfolio-link">See full portfolio at: <a class="text-link" href="full-portfolio.html">Full portfolio</a></p>
+    </header>
+
+    <main>
+      <section aria-labelledby="selected-work">
+        <div class="section-intro">
+          <h2 id="selected-work">Selected work</h2>
+          <p>Six deliverables. Each one opens in your browser.</p>
+        </div>
+
+        <div class="work-list">
+          <article>
+            <div class="marker" aria-hidden="true">01</div>
+            <div>
+              <h3>Stakeholder Validation through Interactive Insight Stations</h3>
+              <p class="meta">Future of Energy Conference 2025 · Climate Compatible Growth (UK FCDO), via CEDA · Designed and delivered</p>
+              <div class="body">
+                <p>The project's Comprehensive Review and Gap Analysis of Ghana's electric two- and three-wheeler transition was technically dense, and its validation audience was not one audience at all: regulators, e-mobility businesses, transport operators, civil society, researchers and development partners, each arriving with a different mandate and a different level of technical fluency.</p>
+                <p>Instead of a presentation followed by open-floor discussion, I designed a set of interactive Insight Stations. Each station distilled one area of evidence into visual form with targeted prompts, letting participants move to the themes that matched their expertise, interrogate the findings directly, and mark up the analysis with voting stickers and written input.</p>
+                <p>The format did three things at once: translated the technical evidence without removing its substance, segmented information by stakeholder interest, and turned an audience of passive recipients into active reviewers who could identify omissions. The feedback the stations generated fed directly into the revision of the deliverable, closing the loop from evidence to communication to validation and back into the technical work.</p>
+              </div>
+              <a class="cta" href="work/insight-stations-fec-2025.pdf#toolbar=0" target="_blank" rel="noopener">View the Insight Station designs</a>
+            </div>
+          </article>
+
+          <article>
+            <div class="marker" aria-hidden="true">02</div>
+            <div>
+              <h3>PIAC Public Perception Survey</h3>
+              <p class="meta">Public Interest and Accountability Committee / GIZ Ghana · Co-author with Samuel Bekoe and Theo Acheampong</p>
+              <div class="body">
+                <p>Before advising Ghana's petroleum revenue accountability body on how to communicate, we established who was actually hearing it. The survey ran across 12 districts in 11 regions, sampling urban, peri-urban and rural respondents at market centres, schools and colleges, and district offices, with a near-even gender split.</p>
+                <p>The design choice that mattered was reaching people where they already were rather than where an institution assumed they would be. The findings gave the communication strategy an evidence base instead of an assumption, and set the baseline against which future outreach could be measured.</p>
+              </div>
+              <a class="cta" href="work/piac-perception-survey.pdf#toolbar=0" target="_blank" rel="noopener">View the survey findings</a>
+            </div>
+          </article>
+
+          <article>
+            <div class="marker" aria-hidden="true">03</div>
+            <div>
+              <h3>PIAC Communication Strategy and Public Outreach Plan</h3>
+              <p class="meta">Public Interest and Accountability Committee / GIZ Ghana · Technical consultant, via CEDA</p>
+              <div class="body">
+                <p>The strategy built on the perception survey findings and set out how a technical oversight body reaches a public that does not read technical oversight reports.</p>
+                <p>It works through the full chain: situational and SWOT analysis, audience segmentation, strategic objectives, key messages matched to each audience, channel and tactic selection, a data dashboard for making petroleum revenue figures legible, an implementation plan, and the monitoring framework to test whether any of it landed.</p>
+                <p>The premise throughout is that an accountability institution which cannot be understood cannot be used, and that the fix is structural rather than cosmetic.</p>
+              </div>
+              <a class="cta" href="work/piac-communication-strategy.pdf#toolbar=0" target="_blank" rel="noopener">View the strategy</a>
+            </div>
+          </article>
+
+          <article>
+            <div class="marker" aria-hidden="true">04</div>
+            <div>
+              <h3>Youth Engagement on Ghana's Energy Transition Plan</h3>
+              <p class="meta">Analytical Review and Youth &amp; Stakeholder Engagement, 2024 · Strategic Youth Network for Development (SYND), via CEDA · Author and facilitator</p>
+              <div class="body">
+                <p>This is the material I built to take a full analytical review of Ghana's National Energy Transition Framework to young people, and specifically to youth journalists and youth groups working out what their role in the transition actually is.</p>
+                <p>It carries the substance rather than a summary of it: the global transition picture, Ghana's plans and policies, the financing and investment landscape, institutional readiness, the role of critical minerals, and the review's findings and recommendations.</p>
+                <p>The design principle was to equip participants to interrogate the framework themselves rather than to brief them on someone else's conclusions. Young people who can question a policy document become distributors of that scrutiny, with their own audiences. An audience that is only told what to think does not.</p>
+              </div>
+              <a class="cta" href="work/youth-energy-transition-training.pdf#toolbar=0" target="_blank" rel="noopener">View the training material</a>
+            </div>
+          </article>
+
+          <article>
+            <div class="marker" aria-hidden="true">05</div>
+            <div>
+              <h3>Inception Report Summary for Stakeholders</h3>
+              <p class="meta">Exploring the Transition Pathways to Electric 2&amp;3 Wheelers in Ghana, May 2025 · Climate Compatible Growth (UK FCDO), via CEDA</p>
+              <div class="body">
+                <p>A stakeholder-facing translation of a project inception report, produced for the government institutions, private sector partners, civil society organisations and development partners who had joined the launch hosted by the Ministry of State for Climate Change and Sustainability.</p>
+                <p>It sets out the stakeholder ecosystem mapping, what the consultations surfaced, the gender equality and social inclusion analysis, the research methodology and case study areas, and what happens next.</p>
+                <p>The point of a document like this is accountability to the people consulted: participants can see how their input shaped the project's direction, in a form short enough to actually be read.</p>
+              </div>
+              <a class="cta" href="work/ccg-inception-stakeholder-summary.pdf#toolbar=0" target="_blank" rel="noopener">View the summary</a>
+            </div>
+          </article>
+
+          <article>
+            <div class="marker" aria-hidden="true">06</div>
+            <div>
+              <h3>Energy Transition: Cost, Opportunities and Policy Options for Ghana</h3>
+              <p class="meta">Civil Society Platform on Oil and Gas (CSPOG), with support from Gower Street · Produced by CEDA · Published under CC BY-NC 4.0</p>
+              <div class="body">
+                <p>The analytical depth the other work rests on. A full-length study for Ghana's civil society oil and gas coalition, covering global fossil fuel investment, production and consumption trends, international and regional transition frameworks, just transition perspectives, emissions reduction approaches, and what all of it means for Ghana specifically, closing on cost, opportunity and policy options.</p>
+                <p>It is included here as the counterweight to the rest of the selection. Communication work is only worth anything if the analysis underneath it holds, and this is what that analysis looks like before it is translated for anyone.</p>
+              </div>
+              <a class="cta" href="work/energy-transition-cost-opportunities-cspog.pdf#toolbar=0" target="_blank" rel="noopener">View the full report</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="footer-name">Shika Akpaloo · Accra, Ghana</p>
+      <p>shikaangelique@gmail.com · shika@cedaghana.com · +233 552294596</p>
+      <p><a class="text-link" href="full-portfolio.html">See full portfolio</a></p>
+      <p class="redistribution">Materials on this page are shared for professional review and are not for redistribution. Rights in each deliverable remain with the commissioning organisation.</p>
+    </footer>
+  </div>
+</body>
+</html>
